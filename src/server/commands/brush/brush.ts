@@ -31,7 +31,7 @@ const registerInformation: CommandInfo = {
         {
             subName: "cyl",
             permission: "worldedit.brush.cylinder",
-            description: "commands.wedit:brush.description.cylinder",
+            description: "commands.wedit:brush.description.cyl",
             args: [{ flag: "h" }, { name: "pattern", type: "Pattern" }, { name: "radius", type: "float", default: 3 }, { name: "height", type: "int", default: 3 }],
         },
         {

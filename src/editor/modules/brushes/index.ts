@@ -51,12 +51,6 @@ export class BrushPainterModule extends EditorModule {
         this.tool = this.session.toolRail.addTool("worldedit:modalTool:brushPainter", {
             title: "resourcePack.editor.brushPaint.title",
             icon: "pack://textures/editor/Brush.png?filtering=point",
-            tooltip: {
-                description: {
-                    id: "resourcePack.editor.brushPaint.tool.tooltip",
-                    props: [getInputMarkup("worldedit:toolModeKeyBinding:togglePencilBrushMode")],
-                },
-            },
             action: activationAction,
         });
         this.session.inputManager.registerKeyBinding(

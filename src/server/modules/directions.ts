@@ -90,7 +90,7 @@ export class Cardinal implements CustomArgType {
         if (direction === "me" || direction === "m") direction = CardinalDirection.Forward;
         else if (direction.length === 1) direction = Object.values(CardinalDirection).find((dir) => dir[0] === direction);
 
-        if (!Object.keys(CardinalDirection).includes(direction)) throw RawText.translate("commands.generic.wedit:invalidDir").with(args[index]);
+        if (!Object.values(CardinalDirection).includes(direction as CardinalDirection)) throw RawText.translate("commands.generic.wedit:invalidDir").with(args[index]);
 
         const cardinal = new Cardinal(direction as CardinalDirection);
         return { result: cardinal, argIndex: index + 1 };
